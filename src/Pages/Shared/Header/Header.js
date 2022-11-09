@@ -8,6 +8,7 @@ const Header = () => {
   const {userLogout, user} =useContext(AuthContext)
   const logOut = () =>{
     userLogout();
+    console.log('success');
   }
   return (
     <div className="bg-stone-800 text-white">
@@ -48,7 +49,9 @@ const Header = () => {
               <Link>Add service</Link>
             </li>
             {
-              user? (<>
+              user?  (<li>
+                <button onClick={logOut}>logout</button>
+              </li>): (<>
               <li>
                 <Link to="/signup">SignUp</Link>
               </li>
@@ -56,9 +59,7 @@ const Header = () => {
                 <Link to="/login">Login</Link>
               </li></>
               
-              ) : (<li>
-                <button onClick={logOut}>logout</button>
-              </li>)
+              )
             }
             </ul>
           </div>
@@ -84,7 +85,9 @@ const Header = () => {
               <Link>Add service</Link>
             </li>
             {
-              user? (<>
+              user? (<li>
+                <button onClick={logOut}>logout</button>
+              </li>): (<>
               <li>
                 <Link to="/signup">SignUp</Link>
               </li>
@@ -92,9 +95,7 @@ const Header = () => {
                 <Link to="/login">Login</Link>
               </li></>
               
-              ) : (<li>
-                <button onClick={logOut}>logout</button>
-              </li>)
+              )
             }
           </ul>
         </div>
