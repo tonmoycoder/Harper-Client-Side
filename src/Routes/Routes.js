@@ -5,6 +5,7 @@ import Error from '../Pages/Error/Error';
 import Homes from '../Pages/Home/Homes/Homes';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import Services from '../Pages/Services/Services';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: '/signup',
         element: <Register></Register>
       },
+      {
+        path: '/services',
+        element: <Services></Services>
+      }
     ],
   },
   {
