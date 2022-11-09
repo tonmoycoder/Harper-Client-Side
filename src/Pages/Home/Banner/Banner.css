@@ -1,0 +1,19 @@
+.custom_btn{
+    background: rgba(255, 255, 255, 0.221);
+    outline: none;
+    border: none;
+}
+.custom_btn2{
+    background: rgba(255, 57, 17, 0.677);
+    outline: none;
+    border: none;
+}
+.custom_btn2:hover{
+    background: rgba(255, 56, 17, 1);
+}
+.custom_btn:hover{
+    background: rgba(255, 56, 17, 1);
+}
+.icon_size{
+    font-size: 1.4rem;
+}
