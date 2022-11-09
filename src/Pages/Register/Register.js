@@ -17,13 +17,13 @@ const Register = () => {
     const Cpassword = from.Cpassword.value;
 
     if (password !== Cpassword) {
-      toast.error('Your Password and Confirm password dose not match');
+      toast.error('Oops! your password did not matched');
     } else {
       registerUser(email, password)
         .then((res) => {
           UserProfile(name, img);
           console.log(res);
-          toast.success('Your account has been created please login');
+          toast.success('account successfully created');
           from.reset();
         })
         .catch((error) => {

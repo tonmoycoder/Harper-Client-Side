@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo2.png';
+import { AuthContext } from '../../../Contexts/MainContext';
 import './Header.css'
 
 const Header = () => {
+  const {userLogout, user} =useContext(AuthContext)
+  const logOut = () =>{
+    userLogout();
+  }
   return (
     <div className="bg-stone-800 text-white">
       <div className="navbar  max-w-6xl mx-auto">
@@ -42,15 +47,19 @@ const Header = () => {
             <li>
               <Link>Add service</Link>
             </li>
-            <li>
-              <Link to="/signup">SignUp</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link>logout</Link>
-            </li>
+            {
+              user? (<>
+              <li>
+                <Link to="/signup">SignUp</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li></>
+              
+              ) : (<li>
+                <button onClick={logOut}>logout</button>
+              </li>)
+            }
             </ul>
           </div>
           <Link className="h-auto normal-case ">
@@ -74,18 +83,35 @@ const Header = () => {
             <li>
               <Link>Add service</Link>
             </li>
-            <li>
-              <Link to="/signup">SignUp</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link>logout</Link>
-            </li>
+            {
+              user? (<>
+              <li>
+                <Link to="/signup">SignUp</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li></>
+              
+              ) : (<li>
+                <button onClick={logOut}>logout</button>
+              </li>)
+            }
           </ul>
         </div>
-        
+        <div className="navbar-end">
+        <div className="avatar online">
+            <div className="w-14 rounded-full">
+              {user? (
+                <img src={user?.photoURL} alt="Avatar" />
+              ) : (
+                <img  
+                  src="https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg"
+                  alt="dummy Avatar"
+                />
+              )}
+            </div>
+          </div>
+            </div>
       </div>
     </div>
   );
