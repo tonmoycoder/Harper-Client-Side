@@ -1,59 +1,21 @@
 import React from 'react';
-import img1 from '../../../Assets/Banner/1.jpg';
-import img2 from '../../../Assets/Banner/2.jpg';
-import img3 from '../../../Assets/Banner/3.jpg';
-import img4 from '../../../Assets/Banner/4.jpg';
-import img5 from '../../../Assets/Banner/5.jpg';
-import img6 from '../../../Assets/Banner/6.jpg';
+import { Link } from 'react-router-dom';
 import './Banner.css';
-import BannerItem from './BannerItem';
 
 const Banner = () => {
-  const bannerData = [
-    {
-      image: img1,
-      prev: 6,
-      id: 1,
-      next: 2,
-    },
-    {
-      image: img2,
-      prev: 1,
-      id: 2,
-      next: 3,
-    },
-    {
-      image: img3,
-      prev: 2,
-      id: 3,
-      next: 4,
-    },
-    {
-      image: img4,
-      prev: 3,
-      id: 4,
-      next: 5,
-    },
-    {
-      image: img5,
-      prev: 4,
-      id: 5,
-      next: 6,
-    },
-    {
-      image: img6,
-      prev: 5,
-      id: 6,
-      next: 1,
-    },
-  ];
   return (
     <div>
-      <div className="carousel w-full">
-        {bannerData.map((slide) => (
-          <BannerItem key={slide.id} slide={slide}></BannerItem>
-        ))}
-      </div>
+      <div className="hero min-h-screen" style={{ backgroundImage: `url("https://images.pexels.com/photos/4393426/pexels-photo-4393426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")` }}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-2xl">
+      <h1 className="mb-5 text-7xl heading font-bold">Deliveries you can depend on</h1>
+      <h1 className="mb-5 heading text-amber-400 text-7xl second_heading font-bold">When it matters.</h1>
+      <p className="mb-5 poppins text-lg tracking-wide ">Harper Courier guarantees reliable delivery of your product to your customer, at the right location in the right time through its efficient distribution management.</p>
+      <button className="btn btn-primary poppins"><Link to='/login'>Get Started</Link></button>
+    </div>
+  </div>
+</div>
     </div>
   );
 };

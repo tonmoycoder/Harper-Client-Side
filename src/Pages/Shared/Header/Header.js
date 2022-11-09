@@ -5,8 +5,8 @@ import './Header.css'
 
 const Header = () => {
   return (
-    <div className="mt-7 mb-10 max-w-6xl mx-auto">
-      <div className="navbar bg-base-100">
+    <div className="bg-stone-800 text-white">
+      <div className="navbar  max-w-6xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -26,7 +26,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-stone-800 rounded-box w-52">
               <li>
               <Link to="/">Home</Link>
             </li>
@@ -47,6 +47,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link>logout</Link>
             </li>
             </ul>
           </div>
@@ -76,6 +79,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link>logout</Link>
             </li>
           </ul>
         </div>

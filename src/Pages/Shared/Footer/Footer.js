@@ -46,8 +46,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div>
-          <span className="footer-title">ImportantLink</span>
+        <div className='text-base'>
+          <span className="footer-title mt-6">ImportantLink</span>
           <Link to="/" className="link link-hover">
             Home
           </Link>
@@ -58,15 +58,15 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <div>
-          <span className="footer-title">About Company</span>
+        <div className='text-base'>
+          <span className="footer-title mt-6">About Company</span>
           <Link className="link link-hover">Award</Link>
           <Link className="link link-hover">Career</Link>
           <Link className="link link-hover">e-Brochure</Link>
           <Link className="link link-hover">Coverage Map</Link>
         </div>
-        <div>
-          <span className="footer-title">Support</span>
+        <div className='text-base'>
+          <span className="footer-title mt-6">Support</span>
           <Link className="link link-hover">Support Center</Link>
           <Link className="link link-hover">Feedback</Link>
           <Link className="link link-hover">Person 2 Person Delivery</Link>
