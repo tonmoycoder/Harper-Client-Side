@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=PT+Serif:wght@400;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 body {
   margin: 0;
@@ -24,4 +24,8 @@ code {
 
 .heading {
   font-family: 'Cinzel', serif;
+}
+
+.poppins{
+  font-family: 'Poppins', sans-serif;
 }
