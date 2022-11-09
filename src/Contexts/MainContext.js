@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-import getAuth, {
+import  {
+    getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -15,7 +16,7 @@ const MainContext = ({ children }) => {
   const auth = getAuth(app);
 
   // user state
-  const [user, setUser] = useState([]);
+  const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(true);
 
   //  register with email and password
@@ -44,9 +45,9 @@ const MainContext = ({ children }) => {
     return signInWithPopup(auth, provider);
   };
   // github sign in
-  const githubSignIN = (provider) => {
+  const githubSignIN = (gitProvider) => {
     setLoader(true);
-    return signInWithPopup(auth, provider);
+    return signInWithPopup(auth, gitProvider);
   };
   //   user logout
   const userLogout = () => {
