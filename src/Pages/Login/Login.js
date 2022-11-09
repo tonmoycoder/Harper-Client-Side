@@ -26,7 +26,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         from.reset();
-        toast.success("You are successfully login");
+        toast.success("login successful");
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -38,7 +38,7 @@ const Login = () => {
     googleSignIN(provider)
       .then((res) => {
         console.log(res);
-        toast.success("you are successfully login");
+        toast.success("login successful");
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -118,10 +118,10 @@ const Login = () => {
           </div>
           
           <Link
-            to="/register"
-            className="font-general font-medium hover:text-orange-500"
+            to="/signup"
+            className="font-general font-medium underline underline-offset-2 hover:text-orange-500"
           >
-            I don't have an account Register
+            I don't have an account, Register now
           </Link>
         </form>
       </div>
