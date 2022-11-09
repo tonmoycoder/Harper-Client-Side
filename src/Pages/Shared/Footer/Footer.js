@@ -16,12 +16,12 @@ const Footer = () => {
       <footer className="footer p-10 bg-base-200 text-base-content">
         <div>
           <img className='h-40' src={logo} alt="footer logo" />
-          <p>
-            Welcome to asian Car doctor.
+          <p className='text-sm'>
+            Welcome to country fastest online delivery service <span className='text-lg text-red-600'>Harper</span>.
             <br />
-            We fix car with snap of a thanos finger.
+            We deliver your products quickly and efficiently.
             <br />
-            Don't be a failure.We are expert in failure management.
+            We pride ourselves on our fast delivery service <br /> will work hard to get your products to you as soon as possible.
           </p>
           <div className="link_css flex text-3xl gap-x-1.5 cursor-pointer">
             <Link to="/">
@@ -45,8 +45,8 @@ const Footer = () => {
           <Link className="link link-hover">Contact</Link>
         </div>
         <div>
-          <span className="footer-title">Company</span>
-          <Link className="link link-hover">Why Car Doctor</Link>
+          <span className="footer-title">Company Info</span>
+          <Link className="link link-hover">Award</Link>
           <Link className="link link-hover">Why you are a failure</Link>
           <Link className="link link-hover">Stephen He</Link>
           <Link className="link link-hover">Press kit</Link>
