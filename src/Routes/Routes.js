@@ -5,6 +5,7 @@ import Error from '../Pages/Error/Error';
 import Homes from '../Pages/Home/Homes/Homes';
 import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
+import Service from '../Pages/Services/Service';
 import Services from '../Pages/Services/Services';
 
 const router = createBrowserRouter([
@@ -18,29 +19,36 @@ const router = createBrowserRouter([
       },
       {
         path: '/blog',
-        element: <Blog></Blog>
+        element: <Blog></Blog>,
       },
       {
         path: '/login',
-        element: <Login></Login>
+        element: <Login></Login>,
       },
       {
         path: '/signup',
-        element: <Register></Register>
+        element: <Register></Register>,
       },
       {
         path: '/services',
         element: <Services></Services>,
         loader: async () => {
-          return await fetch("http://localhost:5000/products/");
+          return await fetch('http://localhost:5000/products/');
         },
-      }
+      },
+      {
+        path: "/service/:id",
+        element: <Service></Service>,
+        loader: async ({ params }) => {
+          return await fetch(`http://localhost:5000/products/${params.id}`);
+        },
+      },
     ],
   },
   {
     path: '/*',
-    element: <Error></Error>
-  }
+    element: <Error></Error>,
+  },
 ]);
 
 export default router;
