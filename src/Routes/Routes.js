@@ -4,9 +4,11 @@ import Blog from '../Pages/Blog/Blog';
 import Error from '../Pages/Error/Error';
 import Homes from '../Pages/Home/Homes/Homes';
 import Login from '../Pages/Login/Login';
+import MyReviews from '../Pages/Others/Review/MyReview';
 import Register from '../Pages/Register/Register';
 import Service from '../Pages/Services/Service';
 import Services from '../Pages/Services/Services';
+import Private from '../Private/Private';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
         loader: async ({ params }) => {
           return await fetch(`http://localhost:5000/products/${params.id}`);
         },
+      },
+      {
+        path: "/reviews",
+        element: (
+          <Private>
+            <MyReviews></MyReviews>
+          </Private>
+        ),
       },
     ],
   },

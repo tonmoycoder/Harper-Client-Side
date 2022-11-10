@@ -37,16 +37,16 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link>Services</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li>
-              <Link>Blog</Link>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link>My reviews</Link>
+              <Link to="/reviews">My reviews</Link>
             </li>
             <li>
-              <Link>Add service</Link>
+              <Link to="/add">Add service</Link>
             </li>
             {
               user?  (<li>
@@ -73,16 +73,16 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link>Services</Link>
+              <Link to="/services">Services</Link>
             </li>
             <li>
               <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <Link>My reviews</Link>
+              <Link to="/reviews">My reviews</Link>
             </li>
             <li>
-              <Link>Add service</Link>
+              <Link to="/add">Add service</Link>
             </li>
             {
               user? (<li>
