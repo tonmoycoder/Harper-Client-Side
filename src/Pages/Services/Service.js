@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
-import toast from 'react-hot-toast';
 import moment from 'moment/moment';
-import Comment from '../Others/Comment';
+import React, { useContext, useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
+import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/MainContext';
 import UseTitle from '../../Hook/UseTitle';
+import Comment from '../Others/Comment';
 
 const Service = () => {
   UseTitle('Service');
@@ -14,7 +14,7 @@ const Service = () => {
 
   const [comment, setComment] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/comment/${_id}`)
+    fetch(`https://assignment-11-server-green.vercel.app/comment/${_id}`)
       .then((res) => res.json())
       .then((result) => setComment(result));
   }, [_id]);
@@ -37,7 +37,7 @@ const Service = () => {
       serviceName: `${name}`,
     };
 
-    fetch('http://localhost:5000/comments', {
+    fetch('https://assignment-11-server-green.vercel.app/comments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

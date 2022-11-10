@@ -37,14 +37,14 @@ const router = createBrowserRouter([
         path: '/services',
         element: <Services></Services>,
         loader: async () => {
-          return await fetch('http://localhost:5000/products/');
+          return await fetch('https://assignment-11-server-green.vercel.app/products/');
         },
       },
       {
         path: '/service/:id',
         element: <Service></Service>,
         loader: async ({ params }) => {
-          return await fetch(`http://localhost:5000/products/${params.id}`);
+          return await fetch(`https://assignment-11-server-green.vercel.app/products/${params.id}`);
         },
       },
       {

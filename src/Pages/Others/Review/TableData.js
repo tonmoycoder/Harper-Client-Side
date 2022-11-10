@@ -6,7 +6,7 @@ const TableData = ({ datas }) => {
   const handleDelete = (id) => {
     const proceed = window.confirm('Are you want to delete your review');
     if (proceed) {
-      fetch(`http://localhost:5000/userComment/${id}`, {
+      fetch(`https://assignment-11-server-green.vercel.app/userComment/${id}`, {
         method: 'DELETE',
       })
         .then((res) => res.json())

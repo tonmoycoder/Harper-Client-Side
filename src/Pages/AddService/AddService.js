@@ -1,6 +1,6 @@
+import moment from 'moment';
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
-import moment from 'moment';
 import { AuthContext } from '../../Contexts/MainContext';
 import UseTitle from '../../Hook/UseTitle';
 
@@ -26,7 +26,7 @@ const AddService = () => {
       time: `${getUserTime}`,
     };
 
-    fetch('http://localhost:5000/products', {
+    fetch('https://assignment-11-server-green.vercel.app/products', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

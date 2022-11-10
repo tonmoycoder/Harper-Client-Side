@@ -6,7 +6,7 @@ const Earn = () => {
       <div className="divider"></div>
       <div className="flex flex-col md:flex-row text-center md:text-left">
         <div>
-          <img src="https://pathao.com/wp-content/uploads/2018/12/BS9A9999-copy.jpg" alt="" />
+          <img className='rounded-md' src="https://pathao.com/wp-content/uploads/2018/12/BS9A9999-copy.jpg" alt="" />
         </div>
         <div className="md:pl-20">
           <h2 className="heading text-2xl text-center mb-5 mt-4 font-bold">Deliver & Earn</h2>

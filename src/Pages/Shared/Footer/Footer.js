@@ -16,14 +16,13 @@ const Footer = () => {
       <footer className="footer p-10 bg-base-200 text-base-content">
         <div>
           <img className="h-40" src={logo} alt="footer logo" />
-          <p className="text-sm">
+          <p className="text-base">
             Welcome to country fastest online delivery service{' '}
             <span className="text-lg text-red-600">Harper</span>.
             <br />
             We deliver your products quickly and efficiently.
             <br />
-            We pride ourselves on our fast delivery service <br /> will work hard to get your
-            products to you as soon as possible.
+            We pride ourselves on our fast delivery service 
           </p>
           <div className="link_css flex text-3xl gap-x-1.5 cursor-pointer">
             <Link to="/">
