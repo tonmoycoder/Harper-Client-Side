@@ -4,6 +4,7 @@ import Blog from '../Pages/Blog/Blog';
 import Error from '../Pages/Error/Error';
 import Homes from '../Pages/Home/Homes/Homes';
 import Login from '../Pages/Login/Login';
+import EditComment from '../Pages/Others/Review/EditComment';
 import MyReviews from '../Pages/Others/Review/MyReview';
 import Register from '../Pages/Register/Register';
 import Service from '../Pages/Services/Service';
@@ -50,6 +51,14 @@ const router = createBrowserRouter([
         element: (
           <Private>
             <MyReviews></MyReviews>
+          </Private>
+        ),
+      },
+      {
+        path: "/edit",
+        element: (
+          <Private>
+            <EditComment></EditComment>
           </Private>
         ),
       },
