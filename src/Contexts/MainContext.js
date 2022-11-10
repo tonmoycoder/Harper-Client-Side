@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
-import  {
-    getAuth,
+import {
+  getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,

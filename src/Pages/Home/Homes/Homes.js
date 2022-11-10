@@ -5,14 +5,14 @@ import Earn from '../Earn/Earn';
 import Feature from '../Feature/Feature';
 
 const Homes = () => {
-    return (
-        <div className=''>
-            <Banner></Banner>
-            <Cards></Cards>
-            <Feature></Feature>
-            <Earn></Earn>
-        </div>
-    );
+  return (
+    <div className="">
+      <Banner></Banner>
+      <Cards></Cards>
+      <Feature></Feature>
+      <Earn></Earn>
+    </div>
+  );
 };
 
 export default Homes;

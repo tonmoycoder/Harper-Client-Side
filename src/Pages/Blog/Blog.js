@@ -66,8 +66,8 @@ const Blog = () => {
           <br />
           Node.js is a server-side scripting language that is used to create scalable network
           applications. It runs on the server-side, meaning it is executed on the web server. It is
-          used to create things like chatbot, real-time applications, and API&apos;s. It can also
-          be used to create server-side applications that run in the web browser.
+          used to create things like chatbot, real-time applications, and API&apos;s. It can also be
+          used to create server-side applications that run in the web browser.
           <br />
           So, the main difference between JavaScript and Node.js is their purpose. JavaScript is
           used to create interactive web applications while Node.js is used to create scalable

@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/logo2.png';
 import { AuthContext } from '../../../Contexts/MainContext';
-import './Header.css'
+import './Header.css';
 
 const Header = () => {
-  const {userLogout, user} =useContext(AuthContext)
-  const logOut = () =>{
+  const { userLogout, user } = useContext(AuthContext);
+  const logOut = () => {
     userLogout();
     console.log('success');
-  }
+  };
   return (
     <div className="bg-stone-800 text-white">
       <div className="navbar  max-w-6xl mx-auto">
@@ -34,33 +34,34 @@ const Header = () => {
               tabIndex={0}
               className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-stone-800 rounded-box w-52">
               <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
-            <li>
-              <Link to="/reviews">My reviews</Link>
-            </li>
-            <li>
-              <Link to="/add">Add service</Link>
-            </li>
-            {
-              user?  (<li>
-                <button onClick={logOut}>logout</button>
-              </li>): (<>
-              <li>
-                <Link to="/signup">SignUp</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/login">Login</Link>
-              </li></>
-              
-              )
-            }
+                <Link to="/services">Services</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link to="/reviews">My reviews</Link>
+              </li>
+              <li>
+                <Link to="/add">Add service</Link>
+              </li>
+              {user ? (
+                <li>
+                  <button onClick={logOut}>logout</button>
+                </li>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/signup">SignUp</Link>
+                  </li>
+                  <li>
+                    <Link to="/login">Login</Link>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
           <Link className="h-auto normal-case ">
@@ -84,35 +85,36 @@ const Header = () => {
             <li>
               <Link to="/add">Add service</Link>
             </li>
-            {
-              user? (<li>
+            {user ? (
+              <li>
                 <button onClick={logOut}>logout</button>
-              </li>): (<>
-              <li>
-                <Link to="/signup">SignUp</Link>
               </li>
-              <li>
-                <Link to="/login">Login</Link>
-              </li></>
-              
-              )
-            }
+            ) : (
+              <>
+                <li>
+                  <Link to="/signup">SignUp</Link>
+                </li>
+                <li>
+                  <Link to="/login">Login</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
         <div className="navbar-end">
-        <div className="avatar online">
+          <div className="avatar online">
             <div className="w-14 rounded-full">
-              {user? (
+              {user ? (
                 <img src={user?.photoURL} alt="Avatar" />
               ) : (
-                <img  
+                <img
                   src="https://assets.newglue.com/assets/avatar_placeholder-c4a9963ad86c68649100b476add586667aaaf4672a3dbfd6abf0e7338f4f5337.jpg"
                   alt="dummy Avatar"
                 />
               )}
             </div>
           </div>
-            </div>
+        </div>
       </div>
     </div>
   );

@@ -41,14 +41,14 @@ const router = createBrowserRouter([
         },
       },
       {
-        path: "/service/:id",
+        path: '/service/:id',
         element: <Service></Service>,
         loader: async ({ params }) => {
           return await fetch(`http://localhost:5000/products/${params.id}`);
         },
       },
       {
-        path: "/reviews",
+        path: '/reviews',
         element: (
           <Private>
             <MyReviews></MyReviews>
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/edit",
+        path: '/edit',
         element: (
           <Private>
             <EditComment></EditComment>
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/add",
+        path: '/add',
         element: (
           <Private>
             <AddService></AddService>

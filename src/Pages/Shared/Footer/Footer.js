@@ -39,14 +39,16 @@ const Footer = () => {
               <AiFillLinkedin></AiFillLinkedin>
             </Link>
           </div>
-          <div className='mt-2'>
+          <div className="mt-2">
             <p>
-              Copyright © 2022 Harper. All rights reserved. <span className='text-stone-500'>Privacy Policy Terms and Condition
-              Return & Refund Policy</span>
+              Copyright © 2022 Harper. All rights reserved.{' '}
+              <span className="text-stone-500">
+                Privacy Policy Terms and Condition Return & Refund Policy
+              </span>
             </p>
           </div>
         </div>
-        <div className='text-base'>
+        <div className="text-base">
           <span className="footer-title mt-6">ImportantLink</span>
           <Link to="/" className="link link-hover">
             Home
@@ -58,14 +60,14 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <div className='text-base'>
+        <div className="text-base">
           <span className="footer-title mt-6">About Company</span>
           <Link className="link link-hover">Award</Link>
           <Link className="link link-hover">Career</Link>
           <Link className="link link-hover">e-Brochure</Link>
           <Link className="link link-hover">Coverage Map</Link>
         </div>
-        <div className='text-base'>
+        <div className="text-base">
           <span className="footer-title mt-6">Support</span>
           <Link className="link link-hover">Support Center</Link>
           <Link className="link link-hover">Feedback</Link>
